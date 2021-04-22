@@ -1,0 +1,11 @@
+[Trigger]
+Operation   = Install
+Operation   = Upgrade
+Operation   = Remove
+Type        = Package
+Target      = *
+
+[Action]
+Description = looking for pacnew/pacsave files
+When        = PostTransaction
+Exec        = /etc/pacman.d/hooks/locate_pacnew_pacsave.bash
