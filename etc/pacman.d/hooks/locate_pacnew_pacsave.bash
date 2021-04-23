@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-pacman_files=( $(locate pacnew pacsave))
+pacman_files=( $(locate --regex '\.pacnew$' '\.pacsave$'))
 len=${#pacman_files[@]}
 
 RED='\033[0;31m'
